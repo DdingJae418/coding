@@ -5,9 +5,9 @@ using namespace std;
 
 int solution(int N, vector<vector<int>> road, int K) {
     int answer = 0;
-    vector<vector<int>> graph(N, vector<int>(N, INT_MAX));
+    vector<vector<int>> graph(N, vector<int>(N, kInfinite));
     vector<bool> visited(N, false);
-    vector<int> distances(N, INT_MAX);
+    vector<int> distances(N, kInfinite);
 
     // 그래프 생성
     for (int i = 0; i < road.size(); i++)
@@ -23,7 +23,7 @@ int solution(int N, vector<vector<int>> road, int K) {
     distances[0] = 0;
     for (int i = 0; i < N; i++)
     {
-        int minDist = INT_MAX;
+        int minDist = kInfinite;
         int current = -1;
 
         for (int j = 0; j < distances.size(); j++)
@@ -39,7 +39,7 @@ int solution(int N, vector<vector<int>> road, int K) {
 
         for (int j = 0; j < N; j++)
         {
-            if(graph[current][j] != INT_MAX && !visited[j])
+            if(graph[current][j] != kInfinite && !visited[j])
             {
                 if(distances[j] > distances[current] + graph[current][j])
                     distances[j] = distances[current] + graph[current][j];

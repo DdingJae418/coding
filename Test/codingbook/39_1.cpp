@@ -1,8 +1,10 @@
 #include <vector>
 #include <tuple>
-#include <climits>
+#include <limits>
 
 using namespace std;
+
+const int kInfinite = numeric_limits<int>::max();
 
 vector<int> solution(int num_vertices, vector<tuple<int, int, int>> edges, int source)
 {
@@ -10,7 +12,7 @@ vector<int> solution(int num_vertices, vector<tuple<int, int, int>> edges, int s
     for (auto &[from, to, weight] : edges)
         graph[from].emplace_back(to, weight);
     
-    vector<int> distances(num_vertices, INT_MAX);
+    vector<int> distances(num_vertices, kInfinite);
     distances[source] = 0;
 
     for (int i = 0; i < num_vertices - 1; i++)

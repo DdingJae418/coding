@@ -35,7 +35,7 @@ void dijckstra(int node)
     }
 
     // 거리가 제일 짧은 노드 선택
-    int minDist = INT_MAX;
+    int minDist = kInfinite;
     int nextNode = -1;
     for (int i = 0; i < distances.size(); i++)
     {
@@ -62,7 +62,7 @@ vector<int> solution(int start, int numNodes, vector<tuple<int, int, int>> edges
     visited.clear();
     for (int i = 0; i < numNodes; i++)
     {
-        distances[i] = INT_MAX;
+        distances[i] = kInfinite;
         parents[i]= -1;
     }
     for (auto& [from, to, weight] : edges)

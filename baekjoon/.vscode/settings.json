@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "istream": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "string": "cpp",
+        "queue": "cpp",
+        "vector": "cpp",
+        "set": "cpp",
+        "unordered_set": "cpp"
+    },
+    "github.copilot.editor.enableAutoCompletions": false,
+}

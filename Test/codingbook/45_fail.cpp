@@ -7,7 +7,7 @@ using namespace std;
 int dx[4] = {-1, 0, 1, 0};
 int dy[4] = {0, -1, 0, 1};
 int width, height;
-int answer = INT_MAX;
+int answer = kInfinite;
 
 vector<vector<bool>> visited;
 vector<vector<int>> boardCopy;

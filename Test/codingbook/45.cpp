@@ -58,7 +58,7 @@ int solution(vector<vector<int>> board) {
         }
     }
     
-    int minCost = INT_MAX;
+    int minCost = kInfinite;
     for (int i = 0; i < 4; i++)
     {
         if(dist[boardSize - 1][boardSize - 1][i] == -1) continue;

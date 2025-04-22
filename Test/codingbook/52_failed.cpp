@@ -9,7 +9,7 @@ vector<bool> visited;
 vector<int> workerDist;
 vector<bool> used;
 int circleSize;
-int answer = INT_MAX;
+int answer = kInfinite;
 
 void dfs(int weakPoint, int workerCnt)
 {
@@ -83,7 +83,7 @@ int solution(int n, vector<int> weak, vector<int> dist) {
     // 몇 번째 취약 지점 보낼지 결정
     dfs(0, 0);
 
-    if(answer = INT_MAX) return -1;
+    if(answer = kInfinite) return -1;
     else
         return answer;
 }

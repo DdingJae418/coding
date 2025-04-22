@@ -88,11 +88,11 @@ int solution(vector<string> maps) {
         }
     }
 
-    if (distances[leverNode] == INT_MAX) return -1;
+    if (distances[leverNode] == kInfinite) return -1;
     answer += distances[leverNode];
 
     // 레버에서 도착 지점까지 최단거리 탐색
-    vector<int> distances1(adjList.size(), INT_MAX);
+    vector<int> distances1(adjList.size(), kInfinite);
     distances1[leverNode] = 0;
     vector<bool> visited2(adjList.size(), false);
     priority_queue<pair<int, int>, vector<pair<int, int>>, Compare> pq2;
@@ -118,7 +118,7 @@ int solution(vector<string> maps) {
         }
     }
 
-    if(distances1[endNode] == INT_MAX) return -1;
+    if(distances1[endNode] == kInfinite) return -1;
     answer += distances1[endNode];
 
     return answer;
